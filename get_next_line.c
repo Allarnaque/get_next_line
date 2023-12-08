@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: adebert <adebert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 11:26:27 by allan             #+#    #+#             */
-/*   Updated: 2023/12/05 16:13:08 by allan            ###   ########.fr       */
+/*   Updated: 2023/12/08 15:00:58 by adebert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,11 +113,6 @@ char	*get_next_line(int fd)
 	if (!stash)
 		return (NULL);
 	display = stash_to_display(stash);
-	if (!display)
-	{
-		free(display);
-		return (NULL);
-	}
 	stash = stash_reset(stash);
 	return (display);
 }
